@@ -1266,6 +1266,26 @@ a, button, .btn, input, textarea, select, input[type="submit"],
 #colophon a:hover {
     color: #F7C355 !important;
 }
+#colophon .footer-menu > li > a {
+    position: relative !important;
+    display: inline-block !important;
+}
+#colophon .footer-menu > li > a::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    bottom: -2px !important;
+    width: 100% !important;
+    height: 2px !important;
+    background: #F7C355 !important;
+    transform: scaleX(0) !important;
+    transform-origin: right !important;
+    transition: transform var(--apna-ease) !important;
+}
+#colophon .footer-menu > li > a:hover::after {
+    transform: scaleX(1) !important;
+    transform-origin: left !important;
+}
 #colophon .social-icons a:hover,
 #colophon .elementor-social-icon:hover {
     transform: translateY(-3px) scale(1.06) !important;
