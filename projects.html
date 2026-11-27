@@ -1444,7 +1444,7 @@ a, button, .btn, input, textarea, select, input[type="submit"],
     grid-template-columns: 1fr 1fr;
     gap: 22px;
     align-items: start;
-    padding-bottom: 30px;
+    padding-bottom: 0;
 }
 .proj-collage-img {
     border-radius: 16px;
@@ -1472,29 +1472,45 @@ a, button, .btn, input, textarea, select, input[type="submit"],
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 190px;
-    padding: 30px 18px;
-    background: #F7C355;
-    border-radius: 14px;
+    width: 240px;
+    padding: 24px 22px 18px 22px;
+    background: #FFFFFF;
+    border-radius: 28px 28px 0 0;
     text-align: center;
-    box-shadow: 0 20px 45px rgba(247, 195, 85, 0.35);
     z-index: 3;
     transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
+.proj-exp-badge::before,
+.proj-exp-badge::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 28px;
+    height: 28px;
+    pointer-events: none;
+}
+.proj-exp-badge::before {
+    left: -28px;
+    background-image: radial-gradient(at top left, transparent 70%, #FFFFFF 72%);
+}
+.proj-exp-badge::after {
+    right: -28px;
+    background-image: radial-gradient(at top right, transparent 70%, #FFFFFF 72%);
+}
 .proj-exp-badge:hover {
-    transform: translateX(-50%) translateY(-5px);
+    transform: translateX(-50%) translateY(-4px);
 }
 .proj-exp-num {
     font-size: 46px;
     font-weight: 700;
     line-height: 1;
-    color: #FFFFFF;
-    margin-bottom: 8px;
+    color: #145781;
+    margin-bottom: 6px;
 }
 .proj-exp-lbl {
     font-size: 13.5px;
     font-weight: 600;
-    color: #FFFFFF;
+    color: #145781;
 }
 .proj-experts-head {
     margin-bottom: 18px !important;
